@@ -1,0 +1,5 @@
+{
+  "name": "梅花卜卦",
+  "description": "基于梅花易数逻辑的在线卜卦工具，支持笔画起卦、互卦变卦分析及爻辞解读。",
+  "requestFramePermissions": []
+}
