@@ -614,6 +614,12 @@ export interface DivinationResult {
   lowerTrigramId: number;
   movingLine: number;
   analysis: string;
+  structuredAnalysis: {
+    original: { name: string; description: string; interaction: string };
+    mutual: { name: string; description: string; interaction: string };
+    transformed: { name: string; description: string; interaction: string };
+    movingLine: { bit: number; meaning: string };
+  };
 }
 
 export function localDivination(text: string, hour: number): DivinationResult {
@@ -757,6 +763,12 @@ export function localDivination(text: string, hour: number): DivinationResult {
     upperTrigramId: upperId,
     lowerTrigramId: lowerId,
     movingLine,
-    analysis
+    analysis,
+    structuredAnalysis: {
+      original: { name: originalName, description: originalDescription, interaction: interaction.desc },
+      mutual: { name: mutualName, description: mutualDescription, interaction: mutualInteraction.desc },
+      transformed: { name: transformedName, description: transformedDescription, interaction: transformedInteraction.desc },
+      movingLine: { bit: movingLine, meaning: yaoMeaning }
+    }
   };
 }
