@@ -503,7 +503,7 @@ export const HEXAGRAMS: Record<string, Hexagram> = {
     id: "78", name: "山地剥",
     judgment: "不利有攸往。",
     meaning: "高山受到风化侵蚀，逐渐剥落成平地。",
-    description: "剥卦象征剥落、衰败。当前处于极度劣势的衰退期，基础正被不断蚕食时大势已去，切忌螳臂当车或盲目反击。唯有隐忍退避，静待漫长寒冬过去。",
+    description: "剥卦象征剥落、衰败。当前处于极度劣势的衰退期，基础正被不断蚕食，大势已去，切忌螳臂当车或盲目反击。唯有隐忍退避，静待漫长寒冬过去。",
     yaoStatements: { 1: "初六：剥床以足，蔑贞凶。", 2: "六二：剥床以辨，蔑贞凶。", 3: "六三：剥之，无咎。", 4: "六四：剥床以肤，凶。", 5: "六五：贯鱼，以宫人宠，无不利。", 6: "上九：硕果不食，君子得舆，小人剥庐。" },
     yaoMeanings: { 1: "根基开始遭到侵蚀破坏，丧失底线必致凶险。", 2: "破坏逐渐向上蔓延至支架，持续剥落将致凶险。", 3: "在全面衰败中保持独立并顺应脱离，可免除过失。", 4: "破坏已深达核心肌肤，面临极其严重的生存危机。", 5: "将内部矛盾有序整合引导并寻求上层庇护，无不利。", 6: "核心硕果仅存，君子可获拥戴，而小人则会彻底摧毁根基。" }
   },
@@ -691,29 +691,55 @@ export function localDivination(text: string, hour: number): DivinationResult {
 
   const interaction = getInteraction(bodyTrigram.element!, useTrigram.element!);
 
+  // 互卦体用生克
+  const mutualUpperTrigram = TRIGRAMS.find(t => t.id === mutual.upperId)!;
+  const mutualLowerTrigram = TRIGRAMS.find(t => t.id === mutual.lowerId)!;
+  const mutualBody = isMovingInUpper ? mutualLowerTrigram : mutualUpperTrigram;
+  const mutualUse = isMovingInUpper ? mutualUpperTrigram : mutualLowerTrigram;
+  const mutualInteraction = getInteraction(mutualBody.element!, mutualUse.element!);
+
+  // 变卦体用生克
+  const transformedUpperTrigram = TRIGRAMS.find(t => t.id === transformed.upperId)!;
+  const transformedLowerTrigram = TRIGRAMS.find(t => t.id === transformed.lowerId)!;
+  const transformedBody = isMovingInUpper ? transformedLowerTrigram : transformedUpperTrigram;
+  const transformedUse = isMovingInUpper ? transformedUpperTrigram : transformedLowerTrigram;
+  const transformedInteraction = getInteraction(transformedBody.element!, transformedUse.element!);
+
   const analysis = `
 【本卦：${originalName}】
 易经原文：${originalJudgment}
 意象：${originalMeaning}
 解读：${originalDescription}
-（本卦代表事物的现状与起势面貌）
 
-【体用生克】
+【本卦体用】
 体卦：${bodyTrigram.name}（${bodyTrigram.element}）
 用卦：${useTrigram.name}（${useTrigram.element}）
 关系：${interaction.type}
 解读：${interaction.desc}
+（本卦代表事物的现状与起势面貌）
 
 【互卦：${mutualName}】
 易经原文：${mutualJudgment}
 意象：${mutualMeaning}
 解读：${mutualDescription}
+
+【互卦体用】
+体卦：${mutualBody.name}（${mutualBody.element}）
+用卦：${mutualUse.name}（${mutualUse.element}）
+关系：${mutualInteraction.type}
+解读：${mutualInteraction.desc}
 （互卦代表事物发展的中间过程与内在交互及事情本质）
 
 【变卦：${transformedName}】
 易经原文：${transformedJudgment}
 意象：${transformedMeaning}
 解读：${transformedDescription}
+
+【变卦体用】
+体卦：${transformedBody.name}（${transformedBody.element}）
+用卦：${transformedUse.name}（${transformedUse.element}）
+关系：${transformedInteraction.type}
+解读：${transformedInteraction.desc}
 （变卦代表事物的最终趋向与结果）
 
 【动爻：第${movingLine}爻】

@@ -146,7 +146,7 @@ export default function App() {
                   </div>
                   
                   <div className="prose prose-stone max-w-none">
-                    <div className="text-stone-700 leading-relaxed whitespace-pre-wrap font-serif text-lg italic">
+                    <div className="text-stone-700 leading-relaxed whitespace-pre-wrap font-serif text-lg">
                       {result.analysis}
                     </div>
                   </div>
@@ -167,7 +167,7 @@ export default function App() {
                   <div className="w-2 h-2 bg-stone-900 rounded-full animate-ping" />
                 </div>
               </div>
-              <p className="text-stone-400 font-serif italic animate-pulse">正在推演天机，请稍候...</p>
+              <p className="text-stone-400 font-serif animate-pulse">正在推演天机，请稍候...</p>
             </motion.div>
           )}
         </AnimatePresence>
