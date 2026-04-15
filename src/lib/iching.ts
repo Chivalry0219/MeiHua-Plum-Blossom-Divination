@@ -615,10 +615,37 @@ export interface DivinationResult {
   movingLine: number;
   analysis: string;
   structuredAnalysis: {
-    original: { name: string; description: string; interaction: string };
-    mutual: { name: string; description: string; interaction: string };
-    transformed: { name: string; description: string; interaction: string };
-    movingLine: { bit: number; meaning: string };
+    original: { 
+      name: string; 
+      judgment: string; 
+      meaning: string; 
+      description: string; 
+      body: string;
+      use: string;
+      interactionType: string;
+      interactionDesc: string;
+    };
+    mutual: { 
+      name: string; 
+      judgment: string; 
+      meaning: string; 
+      description: string; 
+      body: string;
+      use: string;
+      interactionType: string;
+      interactionDesc: string;
+    };
+    transformed: { 
+      name: string; 
+      judgment: string; 
+      meaning: string; 
+      description: string; 
+      body: string;
+      use: string;
+      interactionType: string;
+      interactionDesc: string;
+    };
+    movingLine: { bit: number; statement: string; meaning: string };
   };
 }
 
@@ -765,10 +792,37 @@ export function localDivination(text: string, hour: number): DivinationResult {
     movingLine,
     analysis,
     structuredAnalysis: {
-      original: { name: originalName, description: originalDescription, interaction: interaction.desc },
-      mutual: { name: mutualName, description: mutualDescription, interaction: mutualInteraction.desc },
-      transformed: { name: transformedName, description: transformedDescription, interaction: transformedInteraction.desc },
-      movingLine: { bit: movingLine, meaning: yaoMeaning }
+      original: { 
+        name: originalName, 
+        judgment: originalJudgment, 
+        meaning: originalMeaning, 
+        description: originalDescription,
+        body: `${bodyTrigram.name}（${bodyTrigram.element}）`,
+        use: `${useTrigram.name}（${useTrigram.element}）`,
+        interactionType: interaction.type,
+        interactionDesc: interaction.desc
+      },
+      mutual: { 
+        name: mutualName, 
+        judgment: mutualJudgment, 
+        meaning: mutualMeaning, 
+        description: mutualDescription,
+        body: `${mutualBody.name}（${mutualBody.element}）`,
+        use: `${mutualUse.name}（${mutualUse.element}）`,
+        interactionType: mutualInteraction.type,
+        interactionDesc: mutualInteraction.desc
+      },
+      transformed: { 
+        name: transformedName, 
+        judgment: transformedJudgment, 
+        meaning: transformedMeaning, 
+        description: transformedDescription,
+        body: `${transformedBody.name}（${transformedBody.element}）`,
+        use: `${transformedUse.name}（${transformedUse.element}）`,
+        interactionType: transformedInteraction.type,
+        interactionDesc: transformedInteraction.desc
+      },
+      movingLine: { bit: movingLine, statement: yaoStatement, meaning: yaoMeaning }
     }
   };
 }
