@@ -1,22 +1,52 @@
-项目简介
-本项目是一个基于Web技术的梅花易数占卜应用。其核心机制是利用用户即兴输入的文字，并结合当前时间来进行起
-无论是初学者还是有经验的易学爱好者，都可以通过本工具快速获取卦象信息。对于想要通过梅花易数占卜具体事件的朋友来说，这是一个非常实用的辅助工具;如果您具备一定的易学基础，使用体验将会更佳。
+🌸 梅花易数 (MeiHua Divination)
+传统智慧与现代技术的简洁交汇。
+Where traditional wisdom meets modern simplicity.
 
-Introduction
-MeiHua is a web-based application designed for Plum Blossom Divination (Mei Hua Yi Shu). Its core mechanism allows
-users to generate hexagrams by combining spontaneous characters with the current time.
-Whether you are a beginner or an experienced practitioner of the I Ching, this tool provides a streamlined way toobtain hexagram information. It serves as a practical auxiliary tool for those seeking to divine specific events; userswith a foundational knowledge of traditional divination will find the experience even more professional and insightful.
+📖 项目简介 | Introduction
+🇨🇳 中文
+欢迎使用“梅花易数”占卜应用。本项目是一个基于 Web 技术的轻量级工具，旨在将传统的起卦过程数字化。其核心机制是捕捉您“灵光一闪”的即兴文字，并结合当前时间，自动推演生成卦象。
 
-主要功能
-便捷起卦:支持”即兴字与当前时间”的梅花易数起卦方式。
-经典传承:提供原汁原味的卦象《易经》原文。
-现代解读:结合现代语境，提供简要且易懂的白话文解读。
-专业分析:提供体用生克的深度解析，帮助判断事件吉凶走向。提供动爻与爻辞的详细分析，精准定位关键变化。
-个性化设置:支持自定义设置功能，满足不同用户的使用习惯。
+无论您是对《易经》充满好奇的初学者，还是有一定基础的易学爱好者，都可以通过本应用过滤掉繁琐的推算步骤，直接获取清晰的卦象信息。我们希望它不仅是一个占卜具体事件的实用辅助工具，也能成为您日常寻找灵感与启发的安静角落。
 
-Main Functions
-Convenient Divination: Supports the Plum Blossom Divination method using impromptu characters and the current time.
-Classic Heritage: Provides authentic original text of the hexagrams from the *I Ching*.
-Modern Interpretation: Offers concise and easy-to-understand vernacular interpretations in a modern context.
-Professional Analysis: Provides in-depth analysis of the body, function, generation, and restraint relationships to help determine the auspiciousness or inauspiciousness of events. Offers detailed analysis of moving lines and their texts to accurately pinpoint key changes.
-Personalized Settings: Supports customizable settings to meet the usage habits of different users.
+🇬🇧 English
+Welcome to MeiHua, a web-based application designed to digitalize the traditional "Plum Blossom Divination" (Mei Hua Yi Shu). Its core mechanism captures your intuition—combining spontaneous text input with the current time to naturally generate a hexagram.
+
+Whether you are a beginner exploring the I Ching or an experienced practitioner, this tool handles the complex calculations, providing you with direct and clear hexagram information. It is designed to be a practical auxiliary tool for divining specific events, as well as a quiet space to find daily inspiration.
+
+✨ 主要功能 | Main Features
+1. 灵动起卦 (Intuitive Divination)
+
+🇨🇳 支持“即兴字 + 当前时间”的经典梅花易数起卦方式。化繁为简，随时随地获取启示。
+
+🇬🇧 Supports the classic method of combining spontaneous characters with the current time, simplifying the process for immediate insights.
+
+2. 经典传承 (Classic Heritage)
+
+🇨🇳 完整收录原汁原味的《易经》卦象与原文，保留传统易学的严密性与文化底蕴。
+
+🇬🇧 Provides the authentic, original text and hexagrams of the I Ching, preserving the rigor of traditional divination.
+
+3. 现代解读 (Modern Interpretation)
+
+🇨🇳 告别晦涩难懂的文言文。我们提供贴近现代语境的白话文翻译，用简明易懂的语言解析卦象，降低阅读门槛。
+
+🇬🇧 Offers concise, vernacular translations adapted for modern contexts, making the ancient wisdom highly accessible.
+
+4. 专业分析 (Professional Analysis)
+
+🇨🇳 深度解析“体用生克”关系，辅助判断事件的吉凶走向；同时提供动爻与爻辞的详尽拆解，精准定位事物变化的关键转折点。
+
+🇬🇧 Features in-depth analysis of "Body and Function" (体用) generation/restraint dynamics to assess trajectories, alongside detailed breakdowns of moving lines to pinpoint key changes.
+
+5. 个性化设置 (Personalized Settings)
+
+🇨🇳 提供丰富的自定义选项，适应不同用户的阅读偏好与使用习惯。
+
+🇬🇧 Includes customizable settings to accommodate the unique workflows and reading preferences of different users.
+
+写在最后 / Developer's Note:
+
+易理虽精，然事在人为。希望这个小工具能在您犹豫不决时，提供一个不一样的思考视角。
+
+Divination offers a perspective, but your choices shape the future. May this tool bring you clarity and inspiration.
+Includes customizable settings to accommodate the unique workflows and reading preferences of different users.
