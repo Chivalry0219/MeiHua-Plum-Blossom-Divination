@@ -44,6 +44,7 @@ Whether you are a beginner exploring the I Ching or an experienced practitioner,
 
 🇬🇧 Includes customizable settings to accommodate the unique workflows and reading preferences of different users.
 
+
 *写在最后 / Developer's Note:*
 
 *易理虽精，然事在人为。希望这个小工具能在您犹豫不决时，提供一个不一样的思考视角。*
