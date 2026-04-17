@@ -378,12 +378,14 @@ export default function App() {
                           </div>
                         </div>
                         
-                        {displaySettings.historyShowYaoInterpretation && (
-                          <div className="pt-3 border-t border-stone-200">
-                            <p className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">动爻（第{item.analysis.movingLine.bit}爻）</p>
+                        <div className="pt-3 border-t border-stone-200">
+                          <p className="text-xs font-bold text-stone-900 uppercase tracking-wider mb-1">
+                            动爻：第{item.analysis.movingLine.bit}爻 - {item.analysis.movingLine.statement}
+                          </p>
+                          {displaySettings.historyShowYaoInterpretation && (
                             <p className="text-sm text-stone-700">{item.analysis.movingLine.meaning}</p>
-                          </div>
-                        )}
+                          )}
+                        </div>
                       </div>
                     ))
                   )}
